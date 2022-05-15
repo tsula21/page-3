@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 3 - Portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- unicon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- unicon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+    <!-- font-family: 'Tapestry', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <header>
+        <h1>WORKS</h1>
+        <span>
+            <h2>MY</h2>
+            <h3>PORTFOLIO</h3>
+        </span>
+    </header>    
+    
+    <section class="portfolio">
+        <div class="portfolio__container">
+           <div class="stage">
+            <div class="line firstLine">
+              
+            </div>
+            
+           </div>
+        </div>
+    </section>
+
+    <div class="popup">
+        <div class="close">
+            <img src="./icons/pop/close.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="pop">
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="menu__items">
+
+            <div class="menu__item">
+                    <div class="space_text">
+                        <h2>MENU</h2>
+                    </div>
+                    <div id="home" class="menu__space">
+                        <img src="./icons/menu/home.svg" alt="">
+                    </div>
+            </div>
+            <div class="menu__item">
+                    <div class="space_text">
+                        <h2>ABOUT</h2>
+                    </div>
+                    <div id="about" class="menu__space">
+                        <img src="./icons/menu/user.svg" alt="">
+                    </div>
+            </div>
+            <div class="menu__item">
+                    <div class="space_text">
+                        <h2>PORTFOLIO</h2>
+                    </div>
+                    <div id="portfolio" class="menu__space active">
+                        <img src="./icons/menu/portfolio.svg" alt="">
+                    </div>
+            </div>
+            <div class="menu__item">
+                    <div class="space_text">
+                        <h2>CONTACT</h2>
+                    </div>
+                    <div id="contact" class="menu__space">
+                        <img src="./icons/menu/contact.svg" alt="">
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./js/snake.js"></script>
+    <script>
+        $(".snake").snakeify({
+            speed: 200
+        });
+    </script>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
