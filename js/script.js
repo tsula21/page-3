@@ -6,19 +6,24 @@ const portfolio = document.querySelector('#portfolio');
 const contact = document.querySelector('#contact');
 const workBox = document.querySelectorAll('.portfolio .box .overlay h2');
 const body = document.querySelector('body');
+const bar = document.querySelector('.bar');
 const closeTab = document.querySelector('.popup .close img');
 let popUp = document.querySelector('.popup');
 let pop = document.querySelector('.popup .pop');
 let firstLine = document.querySelector('.firstLine');
 let secLine = document.querySelector('.secondLine');
+const menuBar = document.querySelector('.barMenuBtn');
+const closeMenu = document.querySelector('.closebtn');
+const allSideBar = document.querySelector('.responsive__menu');
+console.log(closeMenu);
 
 // LINKS
-const work0 = 'file:///C:/Users/user/Desktop/javascript/Calculator/Calculator.html';
-const work1= 'file:///C:/Users/user/Desktop/Music%20Box/music_box.html#';
+const work0 = 'https://tsula21.github.io/Calculator---Neumorphism-Dark-/';
+const work1 = 'https://tsula21.github.io/music_box/';
 const work2 = 'https://tsula21.github.io/Flip-card/';
-const work3 = 'file:///C:/Users/user/Desktop/HTml/world%20of%20music/index.html#';
-const work4 = 'file:///C:/Users/user/Desktop/javascript/kinopoisk/kinopoisk.html';
-const work5 = 'file:///C:/Users/user/Desktop/javascript/forecast/Forecast_2/forecast.html';
+const work3 = 'https://tsula21.github.io/Landscape-Animation/';
+const work4 = 'https://tsula21.github.io/Films-/';
+const work5 = 'https://tsula21.github.io/Weather-Forecast-/';
 
 let portfolioInfo = [
     {
@@ -26,7 +31,7 @@ let portfolioInfo = [
         project: 'Calculator',
         languages: 'HTML, CSS, Javascript',
         client: 'Envato',
-        preview: 'www.envato.com',
+        preview: 'GitHub Pages',
         img: './img/cover/calc.jpg',
         cover:'./img/portfolio/calc_full.jpg',
         link: work0
@@ -36,7 +41,7 @@ let portfolioInfo = [
         project: 'Music Box',
         languages: 'HTML, CSS, Javascript',
         client: 'Themeforest',
-        preview: 'www.envato.com',
+        preview: 'GitHub Pages',
         img: './img/cover/tape.jpg',
         cover:'./img/portfolio/music_box.jpg',
         link: work1
@@ -46,19 +51,19 @@ let portfolioInfo = [
         project: 'Flip Card',
         languages: 'HTML, CSS, Javascript',
         client: 'Envato',
-        preview: 'www.envato.com',
-        img: './img/cover/cards.jpg',
+        preview: 'GitHub Pages',
+        img: './img/cover/cards2.jpg',
         cover:'./img/portfolio/flip.jpg',
         link: work2
     },
     {
         id: 3,
-        project: 'World Of Music',
+        project: 'Animation JS',
         languages: 'HTML, CSS',
         client: 'Themeforest',
-        preview: 'www.envato.com',
-        img: './img/cover/disc.jpg',
-        cover:'./img/portfolio/world_of_music_2.jpg',
+        preview: 'GitHub Pages',
+        img: './img/cover/moon2.jpg',
+        cover:'./img/portfolio/anim.jpg',
         link: work3
     },
     {
@@ -66,7 +71,7 @@ let portfolioInfo = [
         project: 'Films',
         languages: 'HTML, CSS, Javascript',
         client: 'Envato',
-        preview: 'www.envato.com',
+        preview: 'GitHub Pages',
         img: './img/cover/cinema.jpg',
         cover:'./img/portfolio/films.jpg',
         link: work4
@@ -76,8 +81,8 @@ let portfolioInfo = [
         project: 'Weather Forecast',
         languages: 'HTML, CSS, Javascript',
         client: 'Themeforest',
-        preview: 'www.envato.com',
-        img: './img/cover/umbrella.jpg',
+        preview: 'GitHub Pages',
+        img: './img/cover/rain.jpg',
         cover:'./img/portfolio/forecast.jpg',
         link: work5
     },
@@ -85,10 +90,10 @@ let portfolioInfo = [
 let arr = [];
 
 // ADRESS(URL)
-const page1 = "file:///C:/Users/user/Desktop/Themeforest_Portfolio/page_1/Themeforest_1.html";
-const page2 = "file:///C:/Users/user/Desktop/Themeforest_Portfolio/page_2/Themeforest_2.html";
-const page3 = "file:///C:/Users/user/Desktop/Themeforest_Portfolio/page_3/Themeforest_3.html";
-const page4 = "file:///C:/Users/user/Desktop/Themeforest_Portfolio/page_4/Themeforest_4.html";
+const page1 = "https://tsula21.github.io/page-1/";
+const page2 = "https://tsula21.github.io/page-2/";
+const page3 = "https://tsula21.github.io/page-3/";
+const page4 = "https://tsula21.github.io/page-4/";
 
 
 // Event Listeners
@@ -110,7 +115,8 @@ contact.addEventListener('click', () => {
 });
 
 closeTab.addEventListener('click', closePop);
-
+menuBar.addEventListener('click',openMenu);
+closeMenu.addEventListener('click',menuCloes);
 
 function renderWorks(portfolioInfo){
     portfolioInfo.forEach((elem) => {
@@ -143,6 +149,8 @@ function updateArr(){
     // body.classList.add('active');
     popUp.classList.add('active');
     body.classList.add('active');
+    bar.classList.add('active');
+    
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
@@ -188,25 +196,25 @@ function renderArrItems(){
     });
 }
 
-
 function closePop(){
     body.classList.remove('active');
     popUp.classList.remove('active');
+    bar.classList.remove('active');
+    body.classList.remove('active');
+
     // arr = [];
     arr.shift();
     console.log(arr);
 }
 
+function openMenu(){
+    menuBar.classList.add('active');
+    closeMenu.classList.add('active');
+    allSideBar.classList.add('active');
+}
 
-
-/* 
-1 CALC
-2 MUSIC BOX
-3 MUSIC PAGE
-4 ICE CREAM
-5 FORECAST
-6 WEATHER
-7 FLIP CARD
-8 FILMS
-9 LANDSCAPE
-*/
+function menuCloes(){
+    closeMenu.classList.remove('active');
+    menuBar.classList.remove('active');
+    allSideBar.classList.remove('active');
+}
